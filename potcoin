@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PotCoin Official</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    img {
+      max-width: 200px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to PotCoin 🌿</h1>
+  <p>The official cryptocurrency of the future. Meme + power + fun.</p>
+  <img src="logo.png" alt="PotCoin Logo">
+</body>
+</html>
