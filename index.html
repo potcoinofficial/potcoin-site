@@ -1,89 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>PotCoin</title>
+  <title>PotCoin - Official</title>
   <link rel="icon" href="logo.png" type="image/png">
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f2f2f2;
-      color: #333;
-      text-align: center;
-    }
-
-    header {
-      background-color: #2ecc71;
-      padding: 20px;
-    }
-
-    header img {
-      width: 80px;
-      height: 80px;
-    }
-
-    header h1 {
-      margin: 10px 0 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://images.unsplash.com/photo-1604152135912-04a579ad9f35?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
       color: white;
     }
-
-    section {
-      padding: 30px 20px;
+    header {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-
-    .contact-icons {
-      margin-top: 15px;
+    header img {
+      height: 50px;
     }
-
-    .contact-icons a {
+    nav a {
       margin: 0 10px;
-      display: inline-block;
+      color: #00ff88;
+      text-decoration: none;
+      font-weight: bold;
     }
-
-    .contact-icons img {
-      width: 40px;
-      height: 40px;
+    nav a:hover {
+      text-decoration: underline;
     }
-
+    .container {
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 40px;
+      border-radius: 15px;
+    }
+    h1, h2 {
+      color: #00ff88;
+    }
     footer {
-      background-color: #ddd;
-      padding: 10px;
-      font-size: 14px;
+      background-color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 20px;
+      color: #ccc;
     }
   </style>
 </head>
-
 <body>
   <header>
     <img src="logo.png" alt="PotCoin Logo">
-    <h1>Welcome to PotCoin</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="mailto:info@potcoin.club">Email</a>
+      <a href="https://t.me/potcoinclub" target="_blank">Telegram</a>
+      <a href="https://www.tiktok.com/@potcoin_?_t=ZS-8yGzOlCmZuB&_r=1" target="_blank">TikTok</a>
+      <a href="https://x.com/thanush4lpha?s=21" target="_blank">Twitter</a>
+    </nav>
   </header>
-
-  <section>
-    <h2>Official Contacts</h2>
-    <p>Email: <a href="mailto:info@potcoin.club">info@potcoin.club</a></p>
-
-    <div class="contact-icons">
-      <a href="https://t.me/potcoinclub" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" title="Telegram">
-      </a>
-      <a href="https://www.tiktok.com/@potcoin_?_t=ZS-8yGzOlCmZuB&_r=1" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png" alt="TikTok" title="TikTok">
-      </a>
-      <a href="https://x.com/thanush4lpha?s=21" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670151.png" alt="Twitter/X" title="Twitter">
-      </a>
-    </div>
-  </section>
-
+  <div class="container">
+    <h1>Welcome to PotCoin</h1>
+    <p>The official website of PotCoin, the decentralized meme token on BNB Smart Chain.</p>
+  </div>
   <footer>
     &copy; 2025 PotCoin. All rights reserved.
   </footer>
 </body>
-
 </html>
