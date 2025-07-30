@@ -3,140 +3,152 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PotCoin (PotC)</title>
+  <title>PotC - The Future of Memecoins</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(to bottom right, #0f0f0f, #003f2d);
-      color: #ffffff;
-      scroll-behavior: smooth;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #012d28, #000);
+      color: white;
+      overflow-x: hidden;
     }
     header {
       text-align: center;
-      padding: 4rem 2rem 2rem;
-      background-image: url('stars-bg.jpg');
-      background-size: cover;
-      background-position: center;
+      padding: 60px 20px 20px;
     }
     header img {
-      width: 300px;
+      max-width: 200px;
     }
     header h1 {
-      font-size: 3.5rem;
-      margin-top: 1rem;
-      text-shadow: 0 0 15px #00ffcc;
+      font-size: 3em;
+      margin: 20px 0 10px;
     }
     header p {
-      font-size: 1.25rem;
-      margin-top: 0.5rem;
-      color: #ccc;
-    }
-    .cta {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 1rem 2rem;
-      background: #00ffcc;
-      color: #000;
-      border-radius: 30px;
-      font-size: 1.2rem;
-      text-decoration: none;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      background: rgba(0, 0, 0, 0.4);
-      padding: 1rem;
-      position: sticky;
-      top: 0;
-    }
-    nav a {
-      color: #00ffcc;
-      text-decoration: none;
-      font-weight: bold;
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: auto;
     }
     section {
-      padding: 4rem 2rem;
+      padding: 40px 20px;
       max-width: 1000px;
-      margin: 0 auto;
+      margin: auto;
     }
-    section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #00ffcc;
-      display: inline-block;
+    h2 {
+      border-bottom: 2px solid #0fc;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
     }
-    .socials a {
-      display: inline-block;
-      margin: 0.5rem 1rem;
-      color: #00ffcc;
-      font-size: 1rem;
+    .social {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .social a {
+      color: #0fc;
+      margin: 0 10px;
+      text-decoration: none;
     }
     footer {
       text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #888;
+      padding: 20px;
+      background: #011b18;
+      font-size: 0.9em;
+    }
+    .coin-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .coin {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background-image: url('logo.png');
+      background-size: cover;
+      animation: fall 8s linear infinite;
+    }
+    @keyframes fall {
+      0% { transform: translateY(-50px); opacity: 0; }
+      100% { transform: translateY(110vh); opacity: 1; }
     }
   </style>
 </head>
 <body>
+  <div class="coin-animation" id="coin-container"></div>
+
   <header>
-    <img src="logo.png" alt="PotCoin Logo" />
-    <h1>WELCOME TO PotCoin (PotC)</h1>
-    <p>The Cosmic Meme Token That Aims High 🚀</p>
-    <a href="#about" class="cta">Explore More</a>
+    <img src="logo.png" alt="PotC Logo" />
+    <h1>WELCOME TO PotC</h1>
+    <p>PotC is the community-powered memecoin for degens, dreamers, and true believers in the crypto space. Built on BNB Chain with a total supply of 777 Billion tokens.</p>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#token">Tokenomics</a>
-    <a href="#roadmap">Roadmap</a>
-    <a href="#socials">Community</a>
-  </nav>
-
-  <section id="about">
-    <h2>About PotCoin</h2>
-    <p><a href="potc-whitepaper.pdf" target="_blank" style="color:#00ffcc;">📄 View our Whitepaper</a></p>
-    <p>PotCoin (PotC) is a community-powered meme token on the BNB Smart Chain designed to fuel creativity, freedom, and decentralized finance. With a total supply of 777 billion tokens, PotCoin embraces humor, high vibes, and high velocity in crypto culture. Join the mission to take PotC to the moon and beyond.</p>
+  <section>
+    <h2>About PotC</h2>
+    <p>PotC is not affiliated with the legacy PotCoin project. This is a fresh, independent meme project with a mission to empower the next generation of holders through community, fun, and decentralization. We are PotC — a movement for value, memes, and utility.</p>
+    <p>Read more on our <a href="about.html" style="color:#0fc;">About Page</a>.</p>
   </section>
 
-  <section id="token">
-    <h2>Token Details</h2>
+  <section>
+    <h2>Tokenomics</h2>
     <ul>
-      <li><strong>Total Supply:</strong> 777,000,000,000 PotC</li>
-      <li><strong>Contract Address:</strong> <a href="https://bscscan.com/token/0x34720CBff358558C03462b169A1090F1665dbAD2" target="_blank">View on BscScan</a></li>
+      <li><strong>Total Supply:</strong> 777,000,000,000</li>
+      <li><strong>Token Symbol:</strong> PotC</li>
+      <li><strong>Network:</strong> Binance Smart Chain (BEP-20)</li>
+      <li><strong>Contract:</strong> <a href="https://bscscan.com/token/0x34720CBff358558C03462b169A1090F1665dbAD2" style="color:#0fc;">0x34720CBf...</a></li>
     </ul>
   </section>
 
-  <section id="roadmap">
+  <section>
     <h2>Roadmap</h2>
     <ul>
-      <li>✅ Phase 1: Token Deployment, Website Launch</li>
-      <li>🚀 Phase 2: BscScan Approval, LP Listing on PancakeSwap</li>
-      <li>🌐 Phase 3: NFT Launch & Community Airdrops</li>
-      <li>📈 Phase 4: Marketing Push, CEX Listings, Merch Drops</li>
+      <li>✅ Phase 1: Token Launch, Website, Initial Community</li>
+      <li>🚧 Phase 2: PancakeSwap Listing, Whitepaper, First Partnerships</li>
+      <li>🛣 Phase 3: NFT Series, Marketing Expansion, Influencer Push</li>
+      <li>🚀 Phase 4: CEX Listing, DAO, PotC dApp</li>
     </ul>
   </section>
 
-  <section id="socials">
-    <h2>Join the Community</h2>
-    <div class="socials">
-      <a href="https://x.com/potcoinclub?s=21" target="_blank">Twitter</a>
-      <a href="mailto:info@potcoin.club">Email</a>
-      <a href="#">TikTok (coming soon)</a>
+  <section>
+    <h2>How to Buy</h2>
+    <ol>
+      <li>Install MetaMask or Trust Wallet</li>
+      <li>Connect to BNB Smart Chain</li>
+      <li>Visit <a href="https://pancakeswap.finance" style="color:#0fc;">PancakeSwap</a></li>
+      <li>Import the PotC Token using the contract address</li>
+      <li>Swap BNB for PotC!</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Contact & Socials</h2>
+    <div class="social">
+      <p><strong>Twitter:</strong> <a href="https://x.com/potcoinclub?s=21">@potcoinclub</a></p>
+      <p><strong>Telegram:</strong> Coming Soon</p>
+      <p><strong>TikTok:</strong> Coming Soon</p>
+      <p><strong>Email:</strong> <a href="mailto:thanush4lpha@gmail.com">thanush4lpha@gmail.com</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/potcoinofficial">potcoinofficial</a></p>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 PotCoin Club. All rights reserved.
+    &copy; 2025 PotC. All rights reserved. Not affiliated with PotCoin (ETH). Built with memes and vision.
   </footer>
+
+  <script>
+    // Coin animation generator
+    const container = document.getElementById("coin-container");
+    for (let i = 0; i < 25; i++) {
+      const coin = document.createElement("div");
+      coin.classList.add("coin");
+      coin.style.left = `${Math.random() * 100}vw`;
+      coin.style.animationDuration = `${6 + Math.random() * 4}s`;
+      container.appendChild(coin);
+    }
+  </script>
 </body>
 </html>
