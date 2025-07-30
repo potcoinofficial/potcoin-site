@@ -1,163 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PotC | Official Website</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papWpzH2V9tZFVzPHnT5No2U+DBwlVCBP/kTgNU9nUq6A3kuDJM+pgU+GbA8mDFl9aJ2PBM9ok2JqG3+Ryo6FQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: 'Outfit', sans-serif;
-        background: radial-gradient(circle at top left, #0f0f0f, #000000);
-        color: #ffffff;
-        overflow-x: hidden;
-      }
-      header {
-        text-align: center;
-        padding: 4rem 2rem 2rem;
-        background: linear-gradient(to right, #00ffcc22, #00574d22);
-      }
-      .logo {
-        max-width: 180px;
-        margin-bottom: 1.5rem;
-      }
-      h1 {
-        font-family: 'Orbitron', sans-serif;
-        font-size: 3.5rem;
-        margin-bottom: 0.5rem;
-        background: linear-gradient(90deg, #00ffcc, #00d68f);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      h3 {
-        color: #ccc;
-        font-weight: 300;
-        font-size: 1.3rem;
-      }
-      section {
-        padding: 3rem 2rem;
-        max-width: 1000px;
-        margin: auto;
-      }
-      section h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        border-left: 4px solid #00ffcc;
-        padding-left: 1rem;
-      }
-      .card {
-        background: #111;
-        padding: 2rem;
-        border-radius: 12px;
-        margin-bottom: 2rem;
-        box-shadow: 0 0 20px #00ffcc22;
-      }
-      .social-icons a {
-        margin-right: 15px;
-        color: #00ffcc;
-        font-size: 1.4rem;
-        text-decoration: none;
-      }
-      footer {
-        text-align: center;
-        padding: 2rem;
-        background: #0a0a0a;
-        font-size: 0.9rem;
-        color: #aaa;
-      }
-      .floating-coins {
-        position: fixed;
-        pointer-events: none;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: 0;
-      }
-      .floating-coins span {
-        position: absolute;
-        color: #00ffcc;
-        font-size: 1.5rem;
-        animation: floatDown 8s linear infinite;
-      }
-      @keyframes floatDown {
-        0% {
-          transform: translateY(-100px);
-          opacity: 1;
-        }
-        100% {
-          transform: translateY(100vh);
-          opacity: 0;
-        }
-      }
-    </style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PotC - Official Site</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #0f0f0f, #053b28);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 40px 20px 20px;
+    }
+    h1 {
+      font-size: 3em;
+      margin: 0.2em 0;
+    }
+    h2 {
+      font-size: 1.2em;
+      font-weight: normal;
+    }
+    section {
+      padding: 30px;
+    }
+    .social-links {
+      margin: 20px 0;
+    }
+    .social-links a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 5px 0;
+    }
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
     .coin-animation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 0;
-  }
-  .coin {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background-image: url('logo.png');
-    background-size: cover;
-    animation: fall 8s linear infinite;
-  }
-  @keyframes fall {
-    0% { transform: translateY(-50px); opacity: 0; }
-    100% { transform: translateY(110vh); opacity: 1; }
-  }
-</style>  </head>
-  <body>
-    <div class="floating-coins">
-      <span style="left:10%">🪙</span>
-      <span style="left:30%">🪙</span>
-      <span style="left:50%">🪙</span>
-      <span style="left:70%">🪙</span>
-      <span style="left:90%">🪙</span>
-    </div>
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .coin {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background-image: url('logo.png');
+      background-size: cover;
+      animation: fall 8s linear infinite;
+    }
+    @keyframes fall {
+      0% { transform: translateY(-50px); opacity: 0; }
+      100% { transform: translateY(110vh); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="coin-animation" id="coin-container"></div>
+  <header>
+    <img src="logo.png" alt="PotC Logo" width="120" />
+    <h1>WELCOME TO PotCoin</h1>
+    <h2>The DeFi Future with Utility & Community</h2>
+  </header>
 
-    <header>
-      <img src="logo.png" alt="PotC Logo" class="logo" />
-      <h1>PotC</h1>
-      <h3>The Meme Token with DeFi Power</h3>
-    </header>
+  <section>
+    <h3>About PotC</h3>
+    <p>PotC is a community-driven cryptocurrency designed to power decentralized finance and real-world use. Built on the BNB Smart Chain, PotC aims to create a transparent, fair, and engaging token economy.</p>
+  </section>
 
-    <section>
-      <div class="card">
-        <h2>About PotC</h2>
-        <p>PotC (not to be confused with PotCoin) is a meme-driven cryptocurrency born on BNB Chain with a mission to energize Web3 communities. With a 777 billion total supply, it's community-first, DeFi-friendly, and built for scalability and fun.</p>
-      </div>
+  <section>
+    <h3>Token Information</h3>
+    <p>Total Supply: 777,000,000,000 PotC</p>
+    <p><a href="https://bscscan.com/token/0x34720CBff358558C03462b169A1090F1665dbAD2" target="_blank" style="color:#00ffcc;">View on BscScan</a></p>
+  </section>
 
-      <div class="card">
-        <h2>How to Buy</h2>
-        <p>1. Download MetaMask or Trust Wallet<br>
-        2. Add BNB to your wallet<br>
-        3. Go to <a href="https://pancakeswap.finance" target="_blank">PancakeSwap</a><br>
-        4. Import contract: <strong>0x34720CBff358558C03462b169A1090F1665dbAD2</strong><br>
-        5. Swap BNB for POTC</p>
-      </div>
-
-      <div class="card">
-        <h2>Tokenomics</h2>
-        <p>Total Supply: 777,000,000,000 POTC</p>
-        <p>Verified on <a href="https://bscscan.com/token/0x34720CBff358558C03462b169A1090F1665dbAD2" target="_blank">BscScan</a></p>
-      </div>
-
-      <div class="card">
+    <div class="card">
         <h2>Roadmap</h2>
         <ul>
           <li>✅ Launch & Token Listing</li>
@@ -180,14 +108,28 @@
         </div>
       </div>
 
-      <div class="card">
-        <h2>Contact</h2>
-        <p>Project Lead: Thanush<br>Email: <a href="mailto:thanush4lpha@gmail.com">thanush4lpha@gmail.com</a></p>
-      </div>
-    </section>
+  <
+  <footer>
+    <p>Contact: thanush4lpha@gmail.com</p>
+    <p>&copy; 2025 PotCoin. All rights reserved.</p>
+  </footer>
 
-    <footer>
-      &copy; 2025 PotC. Not affiliated with legacy PotCoin. All rights reserved.
-    </footer>
-  </body>
+  <script>
+    const coinContainer = document.getElementById("coin-container");
+
+    function createCoin() {
+      const coin = document.createElement("div");
+      coin.classList.add("coin");
+      coin.style.left = Math.random() * 100 + "vw";
+      coin.style.animationDuration = (Math.random() * 5 + 5) + "s";
+      coinContainer.appendChild(coin);
+
+      setTimeout(() => {
+        coin.remove();
+      }, 10000);
+    }
+
+    setInterval(createCoin, 300);
+  </script>
+</body>
 </html>
