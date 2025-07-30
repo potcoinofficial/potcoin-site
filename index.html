@@ -1,154 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PotC - The Future of Memecoins</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom, #012d28, #000);
-      color: white;
-      overflow-x: hidden;
-    }
-    header {
-      text-align: center;
-      padding: 60px 20px 20px;
-    }
-    header img {
-      max-width: 200px;
-    }
-    header h1 {
-      font-size: 3em;
-      margin: 20px 0 10px;
-    }
-    header p {
-      font-size: 1.2em;
-      max-width: 600px;
-      margin: auto;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      border-bottom: 2px solid #0fc;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
-    .social {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .social a {
-      color: #0fc;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #011b18;
-      font-size: 0.9em;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PotC | Official Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papWpzH2V9tZFVzPHnT5No2U+DBwlVCBP/kTgNU9nUq6A3kuDJM+pgU+GbA8mDFl9aJ2PBM9ok2JqG3+Ryo6FQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Outfit', sans-serif;
+        background: radial-gradient(circle at top left, #0f0f0f, #000000);
+        color: #ffffff;
+        overflow-x: hidden;
+      }
+      header {
+        text-align: center;
+        padding: 4rem 2rem 2rem;
+        background: linear-gradient(to right, #00ffcc22, #00574d22);
+      }
+      .logo {
+        max-width: 180px;
+        margin-bottom: 1.5rem;
+      }
+      h1 {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 3.5rem;
+        margin-bottom: 0.5rem;
+        background: linear-gradient(90deg, #00ffcc, #00d68f);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      h3 {
+        color: #ccc;
+        font-weight: 300;
+        font-size: 1.3rem;
+      }
+      section {
+        padding: 3rem 2rem;
+        max-width: 1000px;
+        margin: auto;
+      }
+      section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        border-left: 4px solid #00ffcc;
+        padding-left: 1rem;
+      }
+      .card {
+        background: #111;
+        padding: 2rem;
+        border-radius: 12px;
+        margin-bottom: 2rem;
+        box-shadow: 0 0 20px #00ffcc22;
+      }
+      .social-icons a {
+        margin-right: 15px;
+        color: #00ffcc;
+        font-size: 1.4rem;
+        text-decoration: none;
+      }
+      footer {
+        text-align: center;
+        padding: 2rem;
+        background: #0a0a0a;
+        font-size: 0.9rem;
+        color: #aaa;
+      }
+      .floating-coins {
+        position: fixed;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 0;
+      }
+      .floating-coins span {
+        position: absolute;
+        color: #00ffcc;
+        font-size: 1.5rem;
+        animation: floatDown 8s linear infinite;
+      }
+      @keyframes floatDown {
+        0% {
+          transform: translateY(-100px);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(100vh);
+          opacity: 0;
+        }
+      }
+    </style>
     .coin-animation {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 0;
-    }
-    .coin {
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      background-image: url('logo.png');
-      background-size: cover;
-      animation: fall 8s linear infinite;
-    }
-    @keyframes fall {
-      0% { transform: translateY(-50px); opacity: 0; }
-      100% { transform: translateY(110vh); opacity: 1; }
-    }
-  </style>
-</head>
-<body>
-  <div class="coin-animation" id="coin-container"></div>
-
-  <header>
-    <img src="logo.png" alt="PotC Logo" />
-    <h1>WELCOME TO PotC</h1>
-    <p>PotC is the community-powered memecoin for degens, dreamers, and true believers in the crypto space. Built on BNB Chain with a total supply of 777 Billion tokens.</p>
-  </header>
-
-  <section>
-    <h2>About PotC</h2>
-    <p>PotC is not affiliated with the legacy PotCoin project. This is a fresh, independent meme project with a mission to empower the next generation of holders through community, fun, and decentralization. We are PotC — a movement for value, memes, and utility.</p>
-    <p>Read more on our <a href="about.html" style="color:#0fc;">About Page</a>.</p>
-  </section>
-
-  <section>
-    <h2>Tokenomics</h2>
-    <ul>
-      <li><strong>Total Supply:</strong> 777,000,000,000</li>
-      <li><strong>Token Symbol:</strong> PotC</li>
-      <li><strong>Network:</strong> Binance Smart Chain (BEP-20)</li>
-      <li><strong>Contract:</strong> <a href="https://bscscan.com/token/0x34720CBff358558C03462b169A1090F1665dbAD2" style="color:#0fc;">0x34720CBf...</a></li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Roadmap</h2>
-    <ul>
-      <li>✅ Phase 1: Token Launch, Website, Initial Community</li>
-      <li>🚧 Phase 2: PancakeSwap Listing, Whitepaper, First Partnerships</li>
-      <li>🛣 Phase 3: NFT Series, Marketing Expansion, Influencer Push</li>
-      <li>🚀 Phase 4: CEX Listing, DAO, PotC dApp</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>How to Buy</h2>
-    <ol>
-      <li>Install MetaMask or Trust Wallet</li>
-      <li>Connect to BNB Smart Chain</li>
-      <li>Visit <a href="https://pancakeswap.finance" style="color:#0fc;">PancakeSwap</a></li>
-      <li>Import the PotC Token using the contract address</li>
-      <li>Swap BNB for PotC!</li>
-    </ol>
-  </section>
-
-  <section>
-    <h2>Contact & Socials</h2>
-    <div class="social">
-      <p><strong>Twitter:</strong> <a href="https://x.com/potcoinclub?s=21">@potcoinclub</a></p>
-      <p><strong>Telegram:</strong> Coming Soon</p>
-      <p><strong>TikTok:</strong> Coming Soon</p>
-      <p><strong>Email:</strong> <a href="mailto:thanush4lpha@gmail.com">thanush4lpha@gmail.com</a></p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/potcoinofficial">potcoinofficial</a></p>
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .coin {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-image: url('logo.png');
+    background-size: cover;
+    animation: fall 8s linear infinite;
+  }
+  @keyframes fall {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(110vh); opacity: 1; }
+  }
+</style>  </head>
+  <body>
+    <div class="floating-coins">
+      <span style="left:10%">🪙</span>
+      <span style="left:30%">🪙</span>
+      <span style="left:50%">🪙</span>
+      <span style="left:70%">🪙</span>
+      <span style="left:90%">🪙</span>
     </div>
-  </section>
 
-  <footer>
-    &copy; 2025 PotC. All rights reserved. Not affiliated with PotCoin (ETH). Built with memes and vision.
-  </footer>
+    <header>
+      <img src="logo.png" alt="PotC Logo" class="logo" />
+      <h1>PotC</h1>
+      <h3>The Meme Token with DeFi Power</h3>
+    </header>
 
-  <script>
-    // Coin animation generator
-    const container = document.getElementById("coin-container");
-    for (let i = 0; i < 25; i++) {
-      const coin = document.createElement("div");
-      coin.classList.add("coin");
-      coin.style.left = `${Math.random() * 100}vw`;
-      coin.style.animationDuration = `${6 + Math.random() * 4}s`;
-      container.appendChild(coin);
-    }
-  </script>
-</body>
+    <section>
+      <div class="card">
+        <h2>About PotC</h2>
+        <p>PotC (not to be confused with PotCoin) is a meme-driven cryptocurrency born on BNB Chain with a mission to energize Web3 communities. With a 777 billion total supply, it's community-first, DeFi-friendly, and built for scalability and fun.</p>
+      </div>
+
+      <div class="card">
+        <h2>How to Buy</h2>
+        <p>1. Download MetaMask or Trust Wallet<br>
+        2. Add BNB to your wallet<br>
+        3. Go to <a href="https://pancakeswap.finance" target="_blank">PancakeSwap</a><br>
+        4. Import contract: <strong>0x34720CBff358558C03462b169A1090F1665dbAD2</strong><br>
+        5. Swap BNB for POTC</p>
+      </div>
+
+      <div class="card">
+        <h2>Tokenomics</h2>
+        <p>Total Supply: 777,000,000,000 POTC</p>
+        <p>Verified on <a href="https://bscscan.com/token/0x34720CBff358558C03462b169A1090F1665dbAD2" target="_blank">BscScan</a></p>
+      </div>
+
+      <div class="card">
+        <h2>Roadmap</h2>
+        <ul>
+          <li>✅ Launch & Token Listing</li>
+          <li>✅ Website & Brand Identity</li>
+          <li>🔜 Community Airdrops</li>
+          <li>🔜 Influencer Collaborations</li>
+          <li>🔜 NFT Collection</li>
+          <li>🔜 CEX Listings</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Socials</h2>
+        <div class="social-icons">
+          <a href="mailto:thanush4lpha@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://t.me/potcoinclub" target="_blank"><i class="fab fa-telegram"></i></a>
+          <a href="https://x.com/potcoinclub" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.tiktok.com/@potcoin_" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a href="https://github.com/potcoinofficial" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Contact</h2>
+        <p>Project Lead: Thanush<br>Email: <a href="mailto:thanush4lpha@gmail.com">thanush4lpha@gmail.com</a></p>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2025 PotC. Not affiliated with legacy PotCoin. All rights reserved.
+    </footer>
+  </body>
 </html>
