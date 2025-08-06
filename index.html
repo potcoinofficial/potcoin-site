@@ -1,168 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PotC - Official Website</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Power Of Tiktok Coin (POTCOIN)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom, #0f0f0f, #053b28);
-      color: white;
-      overflow-x: hidden;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
+      line-height: 1.6;
     }
     header {
+      background: linear-gradient(to right, #00f2ea, #ff0050);
+      padding: 60px 20px;
       text-align: center;
-      padding: 60px 20px 30px;
     }
-    header img {
-      width: 140px;
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
     }
-    h1 {
-      font-size: 3em;
-      margin: 0.2em 0;
-    }
-    h2 {
-      font-size: 1.3em;
-      font-weight: normal;
+    header p {
+      font-size: 1.2rem;
+      color: #fff;
+      margin-top: 10px;
     }
     section {
-      padding: 50px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
-    section h3 {
-      font-size: 1.8em;
-      margin-bottom: 15px;
+    h2 {
+      color: #00f2ea;
+      margin-bottom: 10px;
     }
-    .button {
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #00ffcc;
-      color: black;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 30px;
-      margin-top: 20px;
-    }
-    .roadmap ul {
+    .tokenomics ul, .roadmap ul {
       list-style: none;
       padding: 0;
     }
-    .roadmap li {
-      margin: 10px 0;
-      font-size: 1.1em;
-    }
-    .social-icons a {
-      margin: 0 10px;
-      color: white;
-      font-size: 1.5em;
-      text-decoration: none;
+    .tokenomics li, .roadmap li {
+      background: #1a1a1a;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 10px;
     }
     footer {
+      background: #111;
+      color: #aaa;
       text-align: center;
-      padding: 30px;
-      font-size: 0.9em;
+      padding: 20px;
     }
-    .coin-animation {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 0;
-    }
-    .coin {
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      background-image: url('logo.png');
-      background-size: cover;
-      animation: fall 8s linear infinite;
-    }
-    @keyframes fall {
-      0% { transform: translateY(-50px); opacity: 0; }
-      100% { transform: translateY(110vh); opacity: 1; }
+    .button {
+      background: #ff0050;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      border-radius: 8px;
     }
   </style>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="coin-animation" id="coin-container"></div>
-
   <header>
-    <img src="logo.png" alt="PotC Logo" />
-    <h1>WELCOME TO POTC</h1>
-    <h2>The DeFi Future with Utility & Community</h2>
+    <h1>Power Of Tiktok Coin (POTCOIN)</h1>
+    <p>The viral power of TikTok meets the future of crypto.</p>
   </header>
 
-  <section id="about">
-    <h3>About PotC</h3>
-    <p>PotC is a community-driven cryptocurrency designed to power decentralized finance and real-world use. Built on the BNB Smart Chain, PotC aims to create a transparent, fair, and engaging token economy.</p>
+  <section class="about">
+    <h2>About POTCOIN</h2>
+    <p>POTCOIN (Power Of Tiktok Coin) is a meme-fueled cryptocurrency that thrives on TikTok virality and community-driven hype. Built on the Binance Smart Chain (BSC), POTCOIN is lightweight, fast, and affordable to trade — making it the perfect token for Gen-Z, meme lovers, and crypto rebels.</p>
   </section>
 
-  <section id="whitepaper">
-    <h3>Whitepaper</h3>
-    <p>Read our official whitepaper to learn more about the mission, tokenomics, and roadmap of PotC.</p>
-    <a href="PotC-Whitepaper.pdf" class="button" target="_blank">Read Whitepaper</a>
-  </section>
-
-  <section id="how-to-buy">
-    <h3>How to Buy PotC</h3>
-    <p>You can buy PotC on PancakeSwap using BNB. Add the token using this contract address:</p>
-    <p><strong>0x34720CBff358558C03462b169A1090F1665dbAD2</strong></p>
-    <a class="button" href="https://pancakeswap.finance/swap?outputCurrency=0x34720CBff358558C03462b169A1090F1665dbAD2" target="_blank">Buy on PancakeSwap</a>
-  </section>
-
-  <section id="bscscan">
-    <h3>View on BscScan</h3>
-    <p>Track transactions, holders, and token data on BscScan.</p>
-    <a href="https://bscscan.com/token/0x34720CBff358558C03462b169A1090F1665dbAD2" class="button" target="_blank">BscScan Page</a>
-  </section>
-
-  <section class="roadmap" id="roadmap">
-    <h3>Roadmap</h3>
+  <section class="tokenomics">
+    <h2>Tokenomics</h2>
     <ul>
-      <li>✅ Launch & Token Listing</li>
-      <li>✅ Website & Brand Identity</li>
-      <li>🔜 Community Airdrops</li>
-      <li>🔜 Influencer Collaborations</li>
-      <li>🔜 NFT Collection</li>
-      <li>🔜 CEX Listings</li>
+      <li>Total Supply: 777,000,000,000 POT</li>
+      <li>Liquidity Pool: 55%</li>
+      <li>Community Airdrops: 20%</li>
+      <li>Developer/Team: 20%</li>
+      <li>Burn (Optional): 5%</li>
     </ul>
   </section>
 
-  <section>
-    <h2>Contact & Socials</h2>
-    <div class="social">
-      <p><strong>Twitter:</strong> <a href="https://x.com/potcoinclub?s=21">@potcoinclub</a></p>
-      <p><strong>Telegram:</strong> a><a href="https://t.me/potcoinclub" >@potcoinclub</a>      
-      <p><strong>TikTok:</strong> <a href="https://www.tiktok.com/@potcoin_">@potcoin_</a><p>
-      <p><strong>Email:</strong> <a href="mailto:info@potcoin.club">info@potcoin.club</a></p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/potcoinofficial">potcoinofficial</a></p>
-    </div>
+  <section class="how-to-buy">
+    <h2>How to Buy POTCOIN</h2>
+    <ol>
+      <li>Download and install MetaMask or Trust Wallet.</li>
+      <li>Add Binance Smart Chain network to your wallet.</li>
+      <li>Buy BNB and send it to your wallet.</li>
+      <li>Go to PancakeSwap and connect your wallet.</li>
+      <li>Swap BNB for POTCOIN using our contract address.</li>
+    </ol>
+    <a href="#" class="button">Buy on PancakeSwap</a>
   </section>
-  
-  <footer>
-    <p>Contact us at <a href="mailto:thanush4lpha@gmail.com">thanush4lpha@gmail.com</a></p>
-    <p>&copy; 2025 PotCoin (PotC). All rights reserved.</p>
-  </footer>
 
-  <script>
-    const coinContainer = document.getElementById("coin-container");
-    function createCoin() {
-      const coin = document.createElement("div");
-      coin.classList.add("coin");
-      coin.style.left = Math.random() * 100 + "vw";
-      coin.style.animationDuration = (Math.random() * 5 + 5) + "s";
-      coinContainer.appendChild(coin);
-      setTimeout(() => coin.remove(), 10000);
-    }
-    setInterval(createCoin, 300);
-  </script>
+  <section class="roadmap">
+    <h2>Roadmap</h2>
+    <ul>
+      <li>✅ Token Deployment</li>
+      <li>✅ Website + Branding Launch</li>
+      <li>📣 TikTok Awareness Campaign</li>
+      <li>🔒 Liquidity Lock and Ownership Renounce</li>
+      <li>📊 CoinMarketCap & CoinGecko Listing</li>
+      <li>🎉 Global Meme Contest</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Contact us: <a href="mailto:info@potcoin.club">info@potcoin.club</a></p>
+    <p>© 2025 Power Of Tiktok Coin. All rights reserved.</p>
+  </footer>
 </body>
 </html>
