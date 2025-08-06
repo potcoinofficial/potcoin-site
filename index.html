@@ -1,117 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Power Of Tiktok Coin (POTCOIN)</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background-color: #0d0d0d;
+      font-family: 'Orbitron', sans-serif;
+      background: #0e0e0e;
       color: #fff;
-      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
     header {
-      background: linear-gradient(to right, #00f2ea, #ff0050);
-      padding: 60px 20px;
+      background: #121212;
       text-align: center;
+      padding: 40px 20px;
+    }
+    header img {
+      width: 140px;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
     }
     header h1 {
-      font-size: 2.5rem;
-      margin: 0;
+      font-size: 36px;
+      margin: 10px 0 5px;
+      color: #00ffae;
     }
     header p {
-      font-size: 1.2rem;
-      color: #fff;
-      margin-top: 10px;
+      font-size: 18px;
+      color: #aaa;
     }
     section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
     }
     h2 {
-      color: #00f2ea;
-      margin-bottom: 10px;
+      color: #00ffae;
+      border-bottom: 2px solid #00ffae;
+      padding-bottom: 8px;
     }
-    .tokenomics ul, .roadmap ul {
-      list-style: none;
-      padding: 0;
-    }
-    .tokenomics li, .roadmap li {
-      background: #1a1a1a;
-      padding: 10px 15px;
-      border-radius: 8px;
-      margin-bottom: 10px;
+    ul, ol {
+      margin-left: 20px;
     }
     footer {
       background: #111;
-      color: #aaa;
       text-align: center;
-      padding: 20px;
+      padding: 30px 10px;
+      font-size: 14px;
+      color: #aaa;
+    }
+    a {
+      color: #00ffae;
+      text-decoration: none;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: #00ffae;
+      font-size: 20px;
     }
     .button {
-      background: #ff0050;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
       display: inline-block;
-      margin-top: 20px;
+      padding: 12px 25px;
+      background: #00ffae;
+      color: #000;
+      font-weight: bold;
       border-radius: 8px;
+      margin-top: 20px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .button:hover {
+      background: #00cc99;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Power Of Tiktok Coin (POTCOIN)</h1>
-    <p>The viral power of TikTok meets the future of crypto.</p>
-  </header>
 
-  <section class="about">
-    <h2>About POTCOIN</h2>
-    <p>POTCOIN (Power Of Tiktok Coin) is a meme-fueled cryptocurrency that thrives on TikTok virality and community-driven hype. Built on the Binance Smart Chain (BSC), POTCOIN is lightweight, fast, and affordable to trade — making it the perfect token for Gen-Z, meme lovers, and crypto rebels.</p>
-  </section>
+<header>
+  <img src="https://raw.githubusercontent.com/potcoinofficial/potcoin-site/main/logo.png" alt="POTCOIN Logo">
+  <h1>Power Of Tiktok Coin (POTCOIN)</h1>
+  <p>The viral memecoin that rides the TikTok algorithm</p>
+</header>
 
-  <section class="tokenomics">
-    <h2>Tokenomics</h2>
-    <ul>
-      <li>Total Supply: 777,000,000,000 POT</li>
-      <li>Liquidity Pool: 55%</li>
-      <li>Community Airdrops: 20%</li>
-      <li>Developer/Team: 20%</li>
-      <li>Burn (Optional): 5%</li>
-    </ul>
-  </section>
+<section>
+  <h2>About POTCOIN</h2>
+  <p><strong>POTCOIN</strong> is a community-powered meme coin inspired by TikTok culture, trends, and hype. Built on Binance Smart Chain, POTCOIN delivers fast, low-cost transactions with maximum meme potential.</p>
+</section>
 
-  <section class="how-to-buy">
-    <h2>How to Buy POTCOIN</h2>
-    <ol>
-      <li>Download and install MetaMask or Trust Wallet.</li>
-      <li>Add Binance Smart Chain network to your wallet.</li>
-      <li>Buy BNB and send it to your wallet.</li>
-      <li>Go to PancakeSwap and connect your wallet.</li>
-      <li>Swap BNB for POTCOIN using our contract address.</li>
-    </ol>
-    <a href="#" class="button">Buy on PancakeSwap</a>
-  </section>
+<section>
+  <h2>Tokenomics</h2>
+  <ul>
+    <li>Total Supply: <strong>777,000,000,000 POT</strong></li>
+    <li>Liquidity Pool: 50%</li>
+    <li>Developer/Team: 20%</li>
+    <li>Community Airdrops: 25%</li>
+    <li>Burn (Optional): 5%</li>
+  </ul>
+</section>
 
-  <section class="roadmap">
-    <h2>Roadmap</h2>
-    <ul>
-      <li>✅ Token Deployment</li>
-      <li>✅ Website + Branding Launch</li>
-      <li>📣 TikTok Awareness Campaign</li>
-      <li>🔒 Liquidity Lock and Ownership Renounce</li>
-      <li>📊 CoinMarketCap & CoinGecko Listing</li>
-      <li>🎉 Global Meme Contest</li>
-    </ul>
-  </section>
+<section>
+  <h2>How to Buy POTCOIN</h2>
+  <ol>
+    <li>Download MetaMask or Trust Wallet</li>
+    <li>Add Binance Smart Chain network</li>
+    <li>Buy BNB and transfer to your wallet</li>
+    <li>Visit PancakeSwap and swap BNB for POTCOIN using the token contract</li>
+  </ol>
+</section>
 
+<section>
+  <h2>Roadmap</h2>
+  <ul>
+    <li><strong>Q3 2025</strong> – Token Deployment, Website Launch, PancakeSwap Listing</li>
+    <li><strong>Q4 2025</strong> – Influencer Collabs, Meme Contests, CMC/CG Listings</li>
+    <li><strong>Q1 2026</strong> – NFT Drop, Governance Tools, Global Expansion</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Whitepaper</h2>
+  <p>Download our official whitepaper for full project details:</p>
+  <a href="POTCOIN_Whitepaper.pdf" class="button" download>Download Whitepaper (PDF)</a>
+</section>
+
+<section>
+  <h2>Join the Community</h2>
+  <p>Be part of the movement and help push POTCOIN viral!</p>
+  <div class="social-icons">
+    <a href="https://t.me/potcoinclub" target="_blank">Telegram</a> |
+    <a href="https://twitter.com/potcoinclub" target="_blank">Twitter</a> |
+    <a href="https://www.tiktok.com/@potcoin_?_t=ZS-8yeeasrNYm7&_r=1 target="_blank">Tiktok</a>
+  </div>
+</section>
+  
   <footer>
-    <p>Contact us: <a href="mailto:info@potcoin.club">info@potcoin.club</a></p>
-    <p>© 2025 Power Of Tiktok Coin. All rights reserved.</p>
-  </footer>
+  <p>© 2025 Power Of Tiktok Coin (POTCOIN). All rights reserved.</p>
+  <p>Contact: <a href="mailto:info@potcoin.club">info@potcoin.club</a></p>
+</footer>
+
 </body>
 </html>
