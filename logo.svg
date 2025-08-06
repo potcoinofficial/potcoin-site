@@ -15,7 +15,7 @@
   <g id="surface1">
     <g clip-path="url(#clip1)" clip-rule="nonzero">
       <path style=" stroke:none;fill-rule:nonzero;fill:#FFD700;;fill-opacity:1;" d="M 0.515625 0 L 31.484375 0 L 31.484375 30.964844 L 0.515625 30.964844 Z M 0.515625 0 "/>
-      <path style=" stroke:none;fill-rule:nonzero;fill:#000000;;fill-opacity:1;" d="M 0.515625 0 L 31.484375 0 L 31.484375 30.964844 L 0.515625 30.964844 Z M 0.515625 0 "/>
+      <path style=" stroke:none;fill-rule:nonzero;fill:#ffffff;fill-opacity:1;" d="M 0.515625 0 L 31.484375 0 L 31.484375 30.964844 L 0.515625 30.964844 Z M 0.515625 0 "/>
     </g>
     <g clip-path="url(#clip2)" clip-rule="nonzero">
       <rect x="0" y="0" width="32" height="32" style="fill:url(#pattern0);stroke:none;"/>
