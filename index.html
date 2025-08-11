@@ -2,152 +2,239 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Power Of Tiktok Coin (POTCOIN)</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>POWER OF TIKTOK Coin (POTCOIN)</title>
+  <link rel="icon" href="favicon.ico" />
   <style>
-    body {
-      font-family: 'Orbitron', sans-serif;
-      background: #0e0e0e;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-      animation: fadeIn 1.5s ease-in-out;
+    :root{
+      --bg:#0a0a0a;--bg2:#111;--card:#0d1513;--em: #25F4EE;--hot:#FF0050;--txt:#e9f7f5;--mut:#9cc6bf;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    header {
-      background: #121212;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    header img {
-      width: 140px;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-    }
-    header h1 {
-      font-size: 36px;
-      margin: 10px 0 5px;
-      color: #00ffae;
-    }
-    header p {
-      font-size: 18px;
-      color: #aaa;
-    }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-    h2 {
-      color: #00ffae;
-      border-bottom: 2px solid #00ffae;
-      padding-bottom: 8px;
-    }
-    ul, ol {
-      margin-left: 20px;
-    }
-    footer {
-      background: #111;
-      text-align: center;
-      padding: 30px 10px;
-      font-size: 14px;
-      color: #aaa;
-    }
-    a {
-      color: #00ffae;
-      text-decoration: none;
-    }
-    .social-icons a {
-      margin: 0 10px;
-      color: #00ffae;
-      font-size: 20px;
-    }
-    .button {
-      display: inline-block;
-      padding: 12px 25px;
-      background: #00ffae;
-      color: #000;
-      font-weight: bold;
-      border-radius: 8px;
-      margin-top: 20px;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-    .button:hover {
-      background: #00cc99;
-    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;background:radial-gradient(80% 60% at 20% 0%, #001a14, #000), linear-gradient(180deg, #00110d, #000);color:var(--txt)}
+    a{color:var(--em);text-decoration:none}
+    a:hover{color:#bffcff}
+    /* NAV */
+    .nav{position:sticky;top:0;z-index:20;backdrop-filter:saturate(140%) blur(8px);background:#0008;border-bottom:1px solid #0f3;}
+    .nav-inner{max-width:1100px;margin:auto;display:flex;align-items:center;gap:16px;padding:10px 16px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand img{width:40px;height:40px}
+    .brand h1{font-size:1.05rem;margin:0;letter-spacing:.5px}
+    .links{margin-left:auto;display:flex;gap:18px}
+    .links a{font-weight:600;font-size:.95rem}
+    .cta{padding:9px 14px;border-radius:999px;background:linear-gradient(90deg,var(--hot),var(--em));color:#000;font-weight:800}
+
+    /* HERO */
+    .hero{position:relative;overflow:hidden}
+    .coin-rain{position:absolute;inset:0;pointer-events:none;z-index:0}
+    .hero-inner{max-width:1100px;margin:auto;padding:64px 20px 32px;display:grid;grid-template-columns:1.1fr 1fr;gap:28px}
+    .hero h2{margin:8px 0 12px;font-size:2.6rem;line-height:1.1}
+    .hero p{color:var(--mut);font-size:1.05rem}
+    .logo-lg{width:min(180px,35vw);filter: drop-shadow(0 0 20px #25f4ee55)}
+    .ctas{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .btn{padding:12px 16px;border-radius:14px;background:var(--card);border:1px solid #153f38}
+    .btn:hover{border-color:#2ef6ea}
+
+    /* SECTIONS */
+    section{max-width:1100px;margin:0 auto;padding:48px 20px}
+    .card{background:linear-gradient(180deg,#0a1210,#060b09);border:1px solid #153f38;border-radius:16px;padding:22px}
+    .grid{display:grid;gap:18px}
+    @media(min-width:900px){.grid-2{grid-template-columns:1fr 1fr}.grid-3{grid-template-columns:repeat(3,1fr)}}
+    h3.title{font-size:1.6rem;margin:0 0 10px}
+    .mut{color:var(--mut)}
+
+    /* TIMELINE */
+    .timeline{display:grid;gap:12px}
+    .step{display:flex;gap:12px;align-items:flex-start}
+    .dot{width:10px;height:10px;border-radius:50%;background:var(--em);box-shadow:0 0 0 4px #25f4ee22}
+
+    /* SOCIALS */
+    .socials{display:flex;gap:14px;flex-wrap:wrap}
+    .chip{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:#07100e;border:1px solid #153f38}
+    .chip svg{width:18px;height:18px}
+
+    /* FOOTER */
+    footer{border-top:1px solid #153f38;background:#000;padding:28px 20px;color:#85a7a0;text-align:center}
+
+    /* COIN ANIMATION */
+    .coin{position:absolute;width:22px;height:22px;opacity:.9;background:url('logo.svg') center/contain no-repeat;animation:fall linear infinite}
+    @keyframes fall{from{transform:translateY(-40px) rotate(0)}to{transform:translateY(110vh) rotate(240deg)}}
   </style>
 </head>
 <body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <img src="logo.svg" alt="POTCOIN Logo" onerror="this.src='logo.png'" />
+        <h1>POWER OF TIKTOK Coin (POTCOIN)</h1>
+      </div>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="#how">How to Buy</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#bscscan">BscScan</a>
+        <a class="cta" href="#whitepaper">Whitepaper</a>
+      </div>
+    </div>
+  </nav>
 
-<header>
-  <img src="https://raw.githubusercontent.com/potcoinofficial/potcoin-site/main/logo.png" alt="POTCOIN Logo">
-  <h1>Power Of Tiktok Coin (POTCOIN)</h1>
-  <p>The viral memecoin that rides the TikTok algorithm</p>
-</header>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="coin-rain" id="coinRain"></div>
+    <section class="hero-inner">
+      <div>
+        <h2>Welcome to <span style="background:linear-gradient(90deg,var(--em),var(--hot));-webkit-background-clip:text;color:transparent">POTCOIN</span></h2>
+        <p>Power of TikTok Coin is a community-first memecoin on BNB Smart Chain. Viral energy + DeFi utility. 777B total supply. Transparent, fun, and built for the culture.</p>
+        <div class="ctas">
+          <a class="btn" href="#how">Buy / Swap</a>
+          <a class="btn" href="#tokenomics">View Tokenomics</a>
+          <a class="btn" href="#socials">Join Community</a>
+        </div>
+      </div>
+      <div style="text-align:center">
+        <img class="logo-lg" src="logo.svg" alt="POTCOIN" onerror="this.src='logo.png'" />
+      </div>
+    </section>
+  </header>
 
-<section>
-  <h2>About POTCOIN</h2>
-  <p><strong>POTCOIN</strong> is a community-powered meme coin inspired by TikTok culture, trends, and hype. Built on Binance Smart Chain, POTCOIN delivers fast, low-cost transactions with maximum meme potential.</p>
-</section>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="grid grid-2">
+      <div class="card">
+        <h3 class="title">About</h3>
+        <p class="mut">POTCOIN (Power of TikTok Coin) is NOT affiliated with the legacy Ethereum PotCoin. This is a fresh BNB Smart Chain token with new branding, roadmap, and community. Holder-led growth, fair access, and simple tokenomics.
+        </p>
+      </div>
+      <div class="card">
+        <h3 class="title">Quick Facts</h3>
+        <ul class="mut" style="line-height:1.8">
+          <li><b>Chain:</b> BNB Smart Chain (BEP-20)</li>
+          <li><b>Token Name (on-chain):</b> Power Of TikTok</li>
+          <li><b>Symbol:</b> POTCOIN</li>
+          <li><b>Total Supply:</b> 777,000,000,000</li>
+          <li><b>Contract:</b> <a href="https://bscscan.com/token/0x34720CBff358558C03462b169A1090F1665dbAD2" target="_blank">0x3472...bAD2</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<section>
-  <h2>Tokenomics</h2>
-  <ul>
-    <li>Total Supply: <strong>777,000,000,000 POT</strong></li>
-    <li>Liquidity Pool: 50%</li>
-    <li>Developer/Team: 20%</li>
-    <li>Community Airdrops: 25%</li>
-    <li>Burn (Optional): 5%</li>
-  </ul>
-</section>
+  <!-- TOKENOMICS -->
+  <section id="tokenomics">
+    <div class="card">
+      <h3 class="title">Tokenomics</h3>
+      <div class="grid grid-3" style="margin-top:10px">
+        <div class="card" style="background:#09110f">
+          <b>Liquidity</b>
+          <p class="mut">Initial LP on PancakeSwap. LP tokens intended to be locked after launch.</p>
+        </div>
+        <div class="card" style="background:#09110f">
+          <b>Community</b>
+          <p class="mut">Airdrops & rewards to grow the TikTok-powered community.</p>
+        </div>
+        <div class="card" style="background:#09110f">
+          <b>Reserve</b>
+          <p class="mut">Reserve for CEX listings, partnerships, and future utility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section>
-  <h2>How to Buy POTCOIN</h2>
-  <ol>
-    <li>Download MetaMask or Trust Wallet</li>
-    <li>Add Binance Smart Chain network</li>
-    <li>Buy BNB and transfer to your wallet</li>
-    <li>Visit PancakeSwap and swap BNB for POTCOIN using the token contract</li>
-  </ol>
-</section>
+  <!-- HOW TO BUY -->
+  <section id="how">
+    <div class="card">
+      <h3 class="title">How to Buy</h3>
+      <ol class="mut" style="max-width:760px;margin:10px auto;text-align:left;line-height:1.9">
+        <li>Install MetaMask or Trust Wallet and switch to <b>BNB Smart Chain</b>.</li>
+        <li>Fund with BNB.</li>
+        <li>Open PancakeSwap and import the token using contract: <b>0x34720CBff358558C03462b169A1090F1665dbAD2</b>.</li>
+        <li>Swap BNB for POTCOIN.</li>
+      </ol>
+      <div class="ctas" style="justify-content:center">
+        <a class="cta" style="color:#000" target="_blank" href="https://pancakeswap.finance/swap?outputCurrency=0x34720CBff358558C03462b169A1090F1665dbAD2">Buy on PancakeSwap</a>
+      </div>
+    </div>
+  </section>
 
-<section>
-  <h2>Roadmap</h2>
-  <ul>
-    <li><strong>Q3 2025</strong> – Token Deployment, Website Launch, PancakeSwap Listing</li>
-    <li><strong>Q4 2025</strong> – Influencer Collabs, Meme Contests, CMC/CG Listings</li>
-    <li><strong>Q1 2026</strong> – NFT Drop, Governance Tools, Global Expansion</li>
-  </ul>
-</section>
+  <!-- BSCSCAN -->
+  <section id="bscscan">
+    <div class="card">
+      <h3 class="title">BscScan</h3>
+      <p class="mut">Track holders, transactions, and contract source on BscScan.</p>
+      <p><a class="btn" target="_blank" href="https://bscscan.com/token/0x34720CBff358558C03462b169A1090F1665dbAD2">Open BscScan Page</a></p>
+    </div>
+  </section>
 
-<section>
-  <h2>Whitepaper</h2>
-  <p>Download our official whitepaper for full project details:</p>
-  <a href="POTCOIN_Whitepaper.pdf" class="button" download>Download Whitepaper (PDF)</a>
-</section>
+  <!-- ROADMAP -->
+  <section id="roadmap">
+    <div class="card">
+      <h3 class="title">Roadmap</h3>
+      <div class="timeline">
+        <div class="step"><span class="dot"></span><div><b>Phase 1 - Launch</b><div class="mut">Deploy token, website live, socials, first LP.</div></div></div>
+        <div class="step"><span class="dot"></span><div><b>Phase 2 - Growth</b><div class="mut">Airdrops, KOL collabs, TikTok campaigns.</div></div></div>
+        <div class="step"><span class="dot"></span><div><b>Phase 3 - Listings</b><div class="mut">Apply CG/CMC, lock LP, CEX outreach.</div></div></div>
+        <div class="step"><span class="dot"></span><div><b>Phase 4 - Utility</b><div class="mut">NFTs / staking concepts based on community vote.</div></div></div>
+      </div>
+    </div>
+  </section>
 
-<section>
-  <h2>Join the Community</h2>
-  <p>Be part of the movement and help push POTCOIN viral!</p>
-  <div class="social-icons">
-    <a href="https://t.me/potcoinclub" target="_blank">Telegram</a> |
-    <a href="https://twitter.com/potcoinclub" target="_blank">Twitter</a> |
-    <a href="https://www.tiktok.com/@potcoin_?_t=ZS-8yeeasrNYm7&_r=1 target="_blank">Tiktok</a>
-  </div>
-</section>
-  
+  <!-- WHITEPAPER -->
+  <section id="whitepaper">
+    <div class="card">
+      <h3 class="title">Whitepaper</h3>
+      <p class="mut">Learn the mission, tokenomics and roadmap in detail.</p>
+      <p><a class="cta" style="color:#000" href="whitepaper.pdf" target="_blank">Download Whitepaper (PDF)</a></p>
+    </div>
+  </section>
+
+  <!-- SOCIALS / CONTACT -->
+  <section id="socials">
+    <div class="card">
+      <h3 class="title">Community & Contact</h3>
+      <div class="socials" style="margin-top:6px">
+        <a class="chip" href="mailto:info@potcoin.club" title="Email">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 2-8 5L4 6h16Zm0 12H4V8l8 5 8-5v10Z"/></svg>
+          info@potcoin.club
+        </a>
+        <a class="chip" href="https://t.me/potcoinclub" target="_blank" title="Telegram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.04 15.34 8.9 19.2a.8.8 0 0 0 1.27.64l2.37-1.72 3.58 2.64c.66.49 1.6.12 1.77-.7l2.84-13.3c.18-.85-.65-1.57-1.45-1.24L3.63 9.6c-.92.38-.88 1.72.06 2l4.5 1.3 9.9-6.26-9.05 8.7Z"/></svg>
+          Telegram
+        </a>
+        <a class="chip" href="https://x.com/potcoinclub" target="_blank" title="X (Twitter)">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.28 3H20l-6.9 7.9L21 21h-5.5l-4.3-5.1L6 21H3.3l7.4-8.5L3 3h5.6l4 4.7L17.3 3Z"/></svg>
+          X / Twitter
+        </a>
+        <a class="chip" href="https://www.tiktok.com/@potcoin_" target="_blank" title="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3h3a6 6 0 0 0 1 3 6 6 0 0 0 3 1v3a9 9 0 0 1-4-1 9 9 0 0 1-3-3v8a6 6 0 1 1-6-6v3a3 3 0 1 0 3 3V3Z"/></svg>
+          TikTok
+        </a>
+        <a class="chip" href="https://github.com/potcoinofficial" target="_blank" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.4c.58.1.8-.25.8-.57V20.2c-3.26.72-3.95-1.57-3.95-1.57-.53-1.33-1.3-1.69-1.3-1.69-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.74 1.26 3.41.96.1-.76.4-1.27.72-1.56-2.6-.3-5.33-1.3-5.33-5.77 0-1.27.46-2.3 1.2-3.12-.12-.3-.52-1.53.12-3.2 0 0 .98-.31 3.2 1.19a11.1 11.1 0 0 1 5.82 0c2.22-1.5 3.2-1.19 3.2-1.19.64 1.67.24 2.9.12 3.2.74.82 1.2 1.85 1.2 3.12 0 4.49-2.74 5.47-5.35 5.77.41.36.77 1.07.77 2.16v3.21c0 .32.22.68.8.57A11.5 11.5 0 0 0 12 .5Z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
   <footer>
-  <p>© 2025 Power Of Tiktok Coin (POTCOIN). All rights reserved.</p>
-  <p>Contact: <a href="mailto:info@potcoin.club">info@potcoin.club</a></p>
-</footer>
+    <div>© 2025 POWER OF TIKTOK Coin (POTCOIN). Not affiliated with legacy PotCoin.</div>
+  </footer>
 
+  <script>
+    // Simple coin rain using your logo40x40.svg (falls back to logo.png)
+    const rain = document.getElementById('coinRain');
+    function drop(){
+      const d=document.createElement('div');
+      d.className='coin';
+      d.style.left=Math.random()*100+'vw';
+      d.style.animationDuration=(6+Math.random()*6)+'s';
+      d.style.animationDelay=(Math.random()*2)+'s';
+      rain.appendChild(d);
+      setTimeout(()=>d.remove(),12000);
+    }
+    for(let i=0;i<24;i++) drop();
+    setInterval(drop,500);
+  </script>
 </body>
 </html>
